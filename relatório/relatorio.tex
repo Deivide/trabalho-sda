@@ -1,0 +1,83 @@
+%-----------------------------------------------------------------
+% UNIOESTE - Centro de Engenharias e Ciências Exatas
+% % Modelo de relatório de Processamento de Imagens
+% Autores: Membros do Labi e Fabiana Frata Furlan Peres
+% 2011
+%-----------------------------------------------------------------
+%DECLARAÇÃO DO TIPO DE DOCUMENTO, TAMANHO DA FOLHA E FONTE
+%-----------------------------------------------------------------
+\documentclass[normalfigtabnum,pnumromarab,normaltoc,12pt]{abnt}
+
+%-----------------------------------------------------------------
+%DEFINIÇÃO DOS PACOTES UTILIZADOS
+%-----------------------------------------------------------------
+\usepackage[abnt-emphasize=bf, abnt-full-initials=yes, abnt-alf, abnt-etal-cite=3]{abnt-alf}
+\usepackage[alf]{abntcite}
+\usepackage[pdftex]{geometry}
+\geometry{a4paper,left=3cm,right=2cm,top=3.0cm,bottom=2.0cm}
+\usepackage {graphicx}
+\usepackage[latin1]{inputenc} %pacote com caracteres especiais latinos, 
+\usepackage[brazil]{babel} %pacote que realiza hifenização e tradução de termos do LaTeX como Bibliography 
+\usepackage[paginas=nao, ordem=alf]{tabela-simbolos}
+\usepackage{algorithm}  %pacote que dá suporte à representação de algoritmos.
+\usepackage{algorithmic}
+\usepackage[listofformat=subparens]{subfig}
+\usepackage{multirow}
+
+\usepackage{graphicx,color}
+
+%-----------------------------------------------------------------
+%TERMOS RENOMEADOS
+%-----------------------------------------------------------------
+\floatname{algorithm}{Algoritmo} %Renomeia o termo Algorithm para Algoritmo, em uma legenda de algoritmo
+\renewcommand{\listalgorithmname}{Lista de Algoritmos} %renomeia o nome da lista de algoritmos, 
+\renewcommand{\listofabreviationsname}{Lista de Abreviaturas}
+\renewcommand{\arraystretch}{1.5}
+\newtheorem{defi}{{\bf Definição}}
+%-----------------------------------------------------------------
+
+\input{capa}
+
+
+
+
+\begin{document}
+
+%-----------------------------------------------------------------
+%CAPA, FOLHA DE ROSTO, AGRADECIMENTOS, DEDICATORIA.....
+%-----------------------------------------------------------------
+\minhacapa
+\begin{espacoumemeio}
+
+
+%-----------------------------------------------------------------
+%INDICES DE FIGURAS, TABELAS, SIGLAS E CAPITULOS 
+%-----------------------------------------------------------------
+\clearpage
+\listoffigures
+%\clearpage
+%\listoftables
+%\clearpage
+%\listadesiglas 
+\clearpage 
+\tableofcontents
+\clearpage
+
+%-----------------------------------------------------------------
+%CAPITULOS 
+%-----------------------------------------------------------------
+
+\input{resultados.tex}
+
+
+%-----------------------------------------------------------------
+%BIBLIOGRAFIA
+%-----------------------------------------------------------------
+\bibliography{bibliografia}
+\bibliographystyle{abnt-alf}
+
+%-----------------------------------------------------------------
+\newpage
+\end{espacoumemeio}
+\end{document}
+%-----------------------------------------------------------------

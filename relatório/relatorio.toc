@@ -1,0 +1,7 @@
+\select@language {brazil}
+\contentsline {chapter}{\numberline {1}Descri\c c\~ao do Sistema}{1}
+\contentsline {section}{\numberline {1.1}M\'odulos}{1}
+\contentsline {section}{\numberline {1.2}Diagrama de Classes do SDA}{2}
+\contentsline {chapter}{\numberline {2}Como utilizar o SDA}{3}
+\contentsline {chapter}{\numberline {3}Datas e Horas Trabalhadas}{5}
+\contentsline {chapter}{Refer\^encias}{6}

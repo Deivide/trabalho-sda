@@ -1,0 +1,106 @@
+%--------------------------------------------------------------
+%DEFINIÇÃO DE FORMATAÇÕES
+%--------------------------------------------------------------
+\providecommand{\Jinstituicao}{}
+\renewcommand{\instituicao}[1]{\renewcommand{\Jinstituicao}{#1}}
+\renewcommand{\instituicaoformat}{\scshape}
+
+\providecommand{\Jtitulo}{}
+\renewcommand{\titulo}[1]{\renewcommand{\Jtitulo}{#1}}
+\renewcommand{\tituloformat}{\normalsize\ABNTchapterfont}
+
+\providecommand{\Jlocal}{}
+\renewcommand{\local}[1]{\renewcommand{\Jlocal}{#1}}
+\renewcommand{\localformat}{\normalsize}
+
+\providecommand{\Jdata}{}
+\renewcommand{\data}[1]{\renewcommand{\Jdata}{#1}}
+\renewcommand{\dataformat}{\normalsize}
+
+\providecommand{\Jautor}{}
+\renewcommand{\autor}[1]{\renewcommand{\Jautor}{#1}}
+\renewcommand{\autorformat}{\normalsize\ABNTsectionfont}
+
+\providecommand{\Jcomentario}{}
+\renewcommand{\comentario}[1]{\renewcommand{\Jcomentario}{#1}}
+\renewcommand{\comentarioformat}{}
+
+\providecommand{\Jorientador}{}
+\providecommand{\Jorientadorname}{}
+\renewcommand{\orientador}[2][Orientador:\vspace{1mm}\\]{\renewcommand{\Jorientadorname}{#1} \renewcommand{\Jorientador}{#2}}
+\renewcommand{\orientadornameformat}{}
+\renewcommand{\orientadorformat}{\normalsize}
+
+\providecommand{\Jcoorientador}{}
+\providecommand{\Jcoorientadorname}{}
+\renewcommand{\coorientador}[2][Co-orientador:\vspace{1mm}\\] {\renewcommand{\Jcoorientadorname}{#1} \renewcommand{\Jcoorientador}{#2}}
+\renewcommand{\coorientadornameformat}{}
+\renewcommand{\coorientadorformat}{\normalsize}
+
+%-----------------------------------------------------------------
+%DEFINIÇAO DOS DADOS PARA CAPA E FOLHA DE ROSTO
+%-----------------------------------------------------------------
+\instituicao{UNIOESTE - UNIVERSIDADE ESTADUAL DO OESTE DO PARANÁ\par
+CAMPUS DE FOZ DO IGUAÇU\par
+CENTRO DE ENGENHARIAS E CIÊNCIAS EXATAS\par
+CIENCIA DA COMPUTAÇÃO - PROCESSAMENTO DE IMAGENS}
+\titulo{SDA - Sistema Distribuído de Arquivos}
+\autor{Deivide Vian\\
+		Lucas Mauricio Comin}
+\local{FOZ DO IGUAÇU}
+\data{2011}
+
+%--------------------------------------------------------------
+%CAPA
+%--------------------------------------------------------------
+\newcommand{\minhacapa}{
+\thispagestyle{empty}
+\setcounter{page}{0}
+\vspace*{0cm}
+
+
+\ABNTifnotempty{\Jinstituicao}
+	{
+		\begin{center}
+			\textbf{\Jinstituicao}
+	 	\end{center} 
+	 }
+	 
+\vfill
+\vfill
+
+\ABNTifnotempty{\Jtitulo}
+	{
+		\begin{center}
+			{\textbf{\Jtitulo}\par}
+		\end{center}
+	}
+
+\vspace*{1cm}
+\vfill
+
+\ABNTifnotempty{\Jtitulo}
+	{	
+		\begin{center}
+			{\textbf{\Jautor}}
+   		\end{center}
+  }
+  
+\vfill
+\vfill
+
+\begin{center}
+  \begin{espacosimples}
+    \setlength{\parskip}{.3cm}
+    \ABNTifnotempty{\Jlocal}
+      {\textbf{{\localformat\Jlocal}}\\ }
+    \ABNTifnotempty{\Jdata}
+      {\textbf{{\dataformat\Jdata}}}
+  \end{espacosimples}
+\end{center}
+
+
+\vspace*{0cm}
+\if@restonecol\twocolumn \else \newpage \fi
+\espaco{\ABNTespacodefault}
+}

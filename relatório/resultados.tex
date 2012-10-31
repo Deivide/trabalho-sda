@@ -1,0 +1,111 @@
+\chapter{Descrição do Sistema}
+
+	\indent O objetivo do SDA é ser uma ferramenta distribuída a qual gerencia dowload e upload de arquivos entre clientes e servidor. 
+	
+	O SDA possui dois módulos principais SDA Cliente e SDA Servidor, estes serão detalhados nas seguintes seções.
+	
+\section{Módulos}
+		
+		Os clientes do SDA que podem acessar as funcionalidades do computador SDA. Responsável por gerenciar as requisições de funcionalidades do sistema tendo a interação com o usuário atráves de uma interface.
+		Os serviços a serem acessados pelo SDA cliente são:
+		
+		\begin{itemize}
+			\item Login: O cliente pode fazer seu login e ser autenticado no servidor;
+			\item Listar todos Arquivos: Listar todos os arquivos presentes no servidor;
+			\item Gravar Arquivos: Gravar Arquivos no repositório do servidor;
+			\item Baixar Arquivos: Gravar Arquivos no repositório do próprio cliente;
+			
+		\end{itemize}
+		
+		Já o servidor é reponsável pelo gerenciamento do sistema, executando as requisições feitas pelo módulo do Cliente e comunicando-se com os repositórios.
+		
+		Atividades a serem gerenciadas pelo servidor:
+		
+		\begin{itemize}
+			\item Autenticar Clientes: Verificar autenticidade de usuários conectados através de dados fornecidos por estes clientes;
+			\item Permitir a visualização da listagem de todos arquivos;
+			\item Gerenciar uploads e downloads;
+		\end{itemize}
+		
+		As operações de inclusão, exclusão e consulta de usuários, estão implementadas através RMI (Remote Method Invocation) e dispõem de algoritmos de criptografia para os dados que trafegam pela rede.
+		
+	As demais operações do sistema utilizam comunicação UDP ou TCP quando necessitas trafegar entre canais de comunicação.
+	
+\section{Diagrama de Classes do SDA}
+
+	\indent O Diagrama de Classes do aplicativo SDA é demostrado na figura a seguir (Figura \ref{figura5}):
+	
+	\begin{figure}[!htb]
+		\centering
+		\includegraphics[scale=0.3]{figuras/diagrama-classes.png}
+		\caption{Diagrama de Classes do SDA.}
+ 		\label{figura5}
+	\end{figure}
+	
+\chapter{Como utilizar o SDA}
+
+	\indent Para utilizar o sistema SDA, primeiramente se faz necessário inicializar os arquivos SDA-server.jar e SDA-manager.jar respectivamente no computador sevidor. Ao serem inicializadas, aparecerão as interfaces a seguir (Figura \ref{figura1}).
+	
+	\begin{figure}[!htb]
+	\begin{minipage}[b]{0.40\linewidth}
+	\includegraphics[width=\linewidth]{figuras/manager.png}
+	\end{minipage} \hfill
+	\begin{minipage}[b]{0.40\linewidth}
+	\includegraphics[width=\linewidth]{figuras/servidor.png}
+	\end{minipage}
+	\caption{Telas Manager e Servidor} \label{figura1}
+	\end{figure}
+	
+	Nestas telas aparecerão todas informações que trafegarão pelo SDA, tais como, clientes conectados, arquivos recebidos, arquivos enviados, pacotes em  que foram divididos tais arquivos, etc. 
+	
+ 	No computador cliente deverá ser inicializado o arquivo SDA-cllient.jar, onde primeiramente aparecerá uma tela para que seja informado o IP do computador servidor, como a mostrada na figura \ref{figura2}.
+ 	\begin{figure}[!htb]
+		\centering
+		\includegraphics[scale=0.35]{figuras/antes-cliente.png}
+		\caption{Configuração IP servidor.}
+ 		\label{figura2}
+	\end{figure}
+
+	Posteriormente aparecerá uma tela para autenticação do cliente, esta tela é mostrada na figura \ref{figura3}.
+	
+	\begin{figure}[!htb]
+		\centering
+		\includegraphics[scale=0.35]{figuras/sda-cliente-login.png}
+		\caption{Autenticação do cliente.}
+ 		\label{figura3}
+	\end{figure}
+	
+	Por fim aparecerá a tela principal do cliente. Nesta tela, o cliente tem a opção de listar todos arquivos presentes no servidor, além de fazer gravar arquivos no servidor. Esta tela é mostrada na figura \ref{figura4}.
+	
+	\begin{figure}[!htb]
+		\centering
+		\includegraphics[scale=0.35]{figuras/cliente.png}
+		\caption{Tela principal cliente.}
+ 		\label{figura4}
+	\end{figure}
+	
+\chapter{Datas e Horas Trabalhadas}
+
+	\indent Para o desenvolvimento deste aplicativo foram necessárias algumas horas dedicadas durante vários dias. Abaixo temos a listagem dos dias e a quantidade de horas trabalhadas:
+	
+	\begin{itemize}
+		\item 15/08/2011 - 1 hora trabalhada;
+		\item 23/08/2011 - 2 horas trabalhadas;
+		\item 07/09/2011 - 2 horas trabalhadas;
+		\item 13/09/2011 - 1 hora trabalhada;
+		\item 22/09/2011 - 2 horas trabalhadas;
+		\item 02/10/2011 - 2 horas trabalhadas;
+		\item 08/10/2011 - 2 horas trabalhadas;
+		\item 10/10/2011 - 2 horas trabalhadas;
+		\item 11/10/2011 - 2 horas trabalhadas;
+		\item 17/10/2011 - 3 horas trabalhadas;
+		\item 18/10/2011 - 3 horas trabalhadas;
+		\item 19/10/2011 - 3 horas trabalhadas;
+		\item 20/10/2011 - 3 horas trabalhadas;
+	\end{itemize} 
+	
+	No total foram necessárias 30 horas de trabalho para o desenvolvimento desta aplicação.
+	
+{\color{white}\cite{coulourissistemas}}
+		
+		
